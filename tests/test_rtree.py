@@ -1,16 +1,12 @@
-# FIXME: path hackery.
-if __name__ == "__main__":
-    import sys, os
-    mypath = os.path.dirname(sys.argv[0])
-    sys.path.append(os.path.abspath(os.path.join(mypath, "../../")))
+import collections
+import math
+import random
+import unittest as ut
 
 from pyrtree import Rect, RTree
-#from pyrtree.rect import *
+from pyrtree.rect import NullRect
 
-import collections
-import unittest as ut
-import random, math
-from testutil import *
+from tests.testutil import *
 
 def rr():
     return random.uniform(0.0,10.0)
